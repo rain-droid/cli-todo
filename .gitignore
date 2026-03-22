@@ -1,6 +1,11 @@
 # Prerequisites
 *.d
+
+# Build Dir
 build/
+
+# Database
+*.db
 
 # Compiled Object files
 *.slo

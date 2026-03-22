@@ -16,6 +16,7 @@
 
 - [ ] Basic Usability (init, add)
 - [ ] SQLite-Integration 
+- [ ] Add Deadlines
 - [ ] Extended Operations (edit, rm, show, set)
 - [ ] Filters in show 
 - [ ] Custom Priorities & Statuses
@@ -64,3 +65,14 @@ CREATE TABLE item (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (list_id) REFERENCES list(id) ON DELETE CASCADE
 );
+
+#### Possible Output
+
+Clido - <List Name> ---- 
+|-<priority>- [ ] <high priority item> <small_description> <deadline> 
+|-<priority>- [ ] <medi priority item> <small_description> <deadline> 
+|-<priority>- [ ] <low priority item> <small_description> <deadline> 
+|-<priority>- [ ] <low priority item> <small_description> <deadline> 
+|-<priority>- [ ] <low priority item> <small_description> <deadline> 
+|-<priority>- [x] <high priority item> <small_description> <deadline> (---) 
+|-<priority>- [x] <high priority item> <small_description> <deadline> (---)
